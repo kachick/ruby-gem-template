@@ -30,7 +30,7 @@ Add this line to your application/library's `Gemfile` is needed in basic use-cas
 gem 'my_new_library', '>= 0.0.1', '< 0.1.0'
 ```
 
-## References
+## Links
 
 - [Repository](https://github.com/kachick/my_new_library)
 - [API documents](https://kachick.github.io/my_new_library/)

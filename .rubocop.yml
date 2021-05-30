@@ -365,9 +365,13 @@ Style/MethodCallWithArgsParentheses:
   AllowParenthesesInChaining: true
   AllowParenthesesInCamelCaseMethod: true
   AllowParenthesesInStringInterpolation: true
-  IgnoredMethods: ['raise', 'puts', 'yield', 'require', 'require_relative', 'load', 'to', 'describe', 'context']
+  IgnoredMethods: ['raise', 'puts', 'yield', 'require', 'require_relative', 'load']
   Exclude:
     - '*.gemspec'
+    - '**.md'
+    - 'test/**/*'
+    - 'spec/**/*'
+    - 'example/**/*'
 
 Style/MethodCallWithoutArgsParentheses:
   Enabled: true
@@ -621,8 +625,7 @@ Style/SoleNestedConditional:
   Enabled: false
 
 Style/SpecialGlobalVars:
-  Enabled: true
-  EnforcedStyle: 'use_english_names'
+  Enabled: false
 
 Style/StabbyLambdaParentheses:
   Enabled: false
