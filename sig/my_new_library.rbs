@@ -11,9 +11,9 @@ class MyNewLibrary < Object
 
   private
 
-  # A pribate API. Should not be used in your code.
+  # A private API. Should not be used in your code.
   def self.new: (milliseconds: Integer, integer: Integer) -> MyNewLibrary
 
-  # A pribate API. Should not be used in your code.
+  # A private API. Should not be used in your code.
   def initialize: (milliseconds: Integer, integer: Integer) -> void
 end
