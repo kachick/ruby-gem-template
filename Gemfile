@@ -6,24 +6,27 @@ source 'https://rubygems.org'
 gemspec
 
 group :development, :test do
-  gem 'rake'
-  gem 'irb'
-  gem 'irb-power_assert'
+  gem 'rake', '>= 13.0.3', '< 20.0'
+  gem 'irb', '>= 1.3.5', '< 2.0'
+  gem 'irb-power_assert', '0.0.2'
 end
 
 group :development do
-  gem 'steep', require: false
-  gem 'rubocop', require: false
-  gem 'rubocop-rake', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rubycw', require: false
-  gem 'rubocop-rspec', require: false
-  gem 'rubocop-md', require: false
+  gem 'rbs', '>= 1.2.0', '< 2.0', require: false
+  gem 'steep', '>= 0.44.1', '< 0.50.0', require: false
+  gem 'yard', '>= 0.9.26', '< 2', require: false
+  gem 'benchmark-ips', '>= 2.9.1', '< 3', require: false
+  gem 'rubocop', '>= 1.15.0', '< 1.16.0', require: false
+  gem 'rubocop-rake', '>= 0.5.1', '< 0.6.0', require: false
+  gem 'rubocop-performance', '>= 1.11.3', '< 1.12.0', require: false
+  gem 'rubocop-rubycw', '>= 0.1.6', '< 0.2.0', require: false
+  gem 'rubocop-rspec', '>= 2.3.0', '< 3.0.0', require: false
+  gem 'rubocop-md', '>= 1.0.1', '< 2.0.0', require: false
 end
 
 group :test do
-  gem 'test-unit'
-  gem 'rspec'
-  gem 'rspec-matchers-power_assert_matchers'
-  gem 'warning'
+  gem 'test-unit', '>= 3.4.1', '< 4.0'
+  gem 'rspec', '>= 3.10.0', '< 4.0'
+  gem 'rspec-matchers-power_assert_matchers', '0.0.2'
+  gem 'warning', '>= 1.2.0', '< 2.0'
 end
