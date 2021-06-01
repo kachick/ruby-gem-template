@@ -6,7 +6,7 @@ require:
   - rubocop-md
 
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.6
   DisplayCopNames: true
   Exclude:
     - '**/vendor/**/*'

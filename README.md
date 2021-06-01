@@ -15,7 +15,7 @@ The motivation is [written in Japanese](https://github.com/kachick/times_kachick
 
 ### Install
 
-Require Ruby 2.5 or later
+Require Ruby 2.6 or later
 
 This command will install the latest version into your environment
 
