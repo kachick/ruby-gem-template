@@ -16,7 +16,7 @@ group :development do
   gem 'steep', '>= 0.44.1', '< 0.50.0', require: false
   gem 'yard', '>= 0.9.26', '< 2', require: false
   gem 'benchmark-ips', '>= 2.9.1', '< 3', require: false
-  gem 'rubocop', '>= 1.15.0', '< 1.16.0', require: false
+  gem 'rubocop', '>= 1.16.0', '< 1.17.0', require: false
   gem 'rubocop-rake', '>= 0.5.1', '< 0.6.0', require: false
   gem 'rubocop-performance', '>= 1.11.3', '< 1.12.0', require: false
   gem 'rubocop-rubycw', '>= 0.1.6', '< 0.2.0', require: false
@@ -25,7 +25,7 @@ group :development do
 end
 
 group :test do
-  gem 'test-unit', '>= 3.4.1', '< 4.0'
+  gem 'test-unit', '>= 3.4.2', '< 4.0'
   gem 'rspec', '>= 3.10.0', '< 4.0'
   gem 'rspec-matchers-power_assert_matchers', '0.0.2'
   gem 'warning', '>= 1.2.0', '< 2.0'
