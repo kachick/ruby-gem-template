@@ -14,14 +14,14 @@ At first, you should install development dependencies
 $ git clone git@github.com:kachick/my_new_library.git
 $ cd ./my_new_library
 $ ./bin/setup
-# Executing first time might take longtime, because development mode dependent active_support via steep
+Dependencies are installed!
 ```
 
 ## Feel the latest version with REPL
 
 ```console
 $ ./bin/console
-Starting up IRB with loading developing this library
+Starting up IRB with loading with latest code
 ```
 
 ## How to make ideal PRs (Not a mandatory rule, feel free to PR!)

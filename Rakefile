@@ -28,7 +28,7 @@ RSpec::Core::RakeTask.new(:spec) do |rt|
   rt.ruby_opts = %w[-w]
 end
 
-task validate_signatures: [:test_yard, :'signature:validate']
+multitask validate_signatures: [:test_yard, :'signature:validate']
 
 namespace :signature do
   task :validate do
@@ -45,7 +45,7 @@ task :test_yard do
 end
 
 task :yard do
-  sh 'bundle exec yard --fail-on-warning'
+  sh 'bundle exec yard'
 end
 
 task :benchmark do
