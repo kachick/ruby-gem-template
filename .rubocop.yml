@@ -2,7 +2,6 @@ require:
   - rubocop-rake
   - rubocop-performance
   - rubocop-rubycw
-  - rubocop-rspec
   - rubocop-md
 
 AllCops:
@@ -919,12 +918,6 @@ Rubycw/Rubycw:
     - 'Steepfile'
     - 'bin/**/*'
     - 'exe/**/*'
-
-RSpec/MultipleExpectations:
-  Enabled: false
-
-RSpec/DescribedClass:
-  Enabled: false
 
 Markdown:
   WarnInvalid: true
