@@ -31,8 +31,8 @@ MyNewLibrary.example(42)
 
 ## Links
 
-- [Repository](https://github.com/kachick/my_new_library)
-- [API documents](https://kachick.github.io/my_new_library/)
+* [Repository](https://github.com/kachick/my_new_library)
+* [API documents](https://kachick.github.io/my_new_library/)
 
 ## Note
 
