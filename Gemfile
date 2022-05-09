@@ -26,6 +26,6 @@ end
 group :test do
   gem 'test-unit', '>= 3.4.4', '< 4.0'
   gem 'rspec', '>= 3.10.0', '< 4.0'
-  gem 'rspec-matchers-power_assert_matchers', '0.0.2'
+  gem 'rspec-matchers-power_assert_matchers', '0.0.3'
   gem 'warning', '>= 1.2.0', '< 2.0'
 end
