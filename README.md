@@ -21,6 +21,7 @@ Add below code into your Gemfile
 
 ```ruby
 gem 'my_new_library', '>= 0.0.1', '< 0.1.0'
+gem 'my_new_library', '~> 0.1.0'
 ```
 
 ### Overview
