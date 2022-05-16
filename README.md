@@ -8,14 +8,12 @@ The motivation is [written in Japanese](https://github.com/kachick/times_kachick
 
 ![logo](https://raw.githubusercontent.com/kachick/my_new_library/main/logo.png)
 
-![Build Status](https://github.com/kachick/my_new_library/actions/workflows/test_behaviors.yml/badge.svg?branch=main)
-[![Gem Version](https://badge.fury.io/rb/my_new_library.png)](http://badge.fury.io/rb/my_new_library)
+[![Build Status](https://github.com/kachick/my_new_library/actions/workflows/test_behaviors.yml/badge.svg?branch=main)](https://github.com/kachick/my_new_library/actions/workflows/test_behaviors.yml/?branch=main)
+[![Gem Version](https://badge.fury.io/rb/my_new_library.svg)](https://badge.fury.io/rb/my_new_library)
 
 Summary
 
 ## Usage
-
-Require Ruby 2.6 or later
 
 Add below code into your Gemfile
 
