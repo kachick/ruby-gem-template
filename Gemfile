@@ -12,7 +12,7 @@ group :development, :test do
 end
 
 group :development do
-  gem 'rbs', '~> 2.4.0', require: false
+  gem 'rbs', '~> 2.5.0', require: false
   gem 'steep', '~> 1.0.0', require: false
   gem 'yard', '~> 0.9.27', require: false
   gem 'benchmark-ips', '~> 2.10.0', require: false
