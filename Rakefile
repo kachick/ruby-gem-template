@@ -32,20 +32,25 @@ end
 desc 'Signature check, it means `rbs` and `YARD` syntax correctness'
 multitask validate_signatures: [:'signature:validate_yard', :'signature:validate_rbs']
 
-namespace :signature do
-  desc 'Validate `rbs` syntax, this should be passed'
-  task :validate_rbs do
-    sh 'bundle exec rbs -rsecurerandom -rmonitor -I sig validate'
+namespace(:signature) do
+  desc('Validate `rbs` syntax, this should be passed')
+  task(:validate_rbs) do
+    sh('bundle exec rbs -rsecurerandom -rmonitor -I sig validate')
   end
 
-  desc 'Check `rbs` definition with `steep`, but it faults from some reasons ref: #26'
-  task :check_false_positive do
-    sh 'bundle exec steep check --log-level=fatal'
+  desc('Check `rbs` definition with `steep`, but it faults from some reasons ref: #26')
+  task(:save_rbs_errors) do
+    sh('bundle exec steep check --severity-level=warning --save-expectations')
   end
 
-  desc 'Generate YARD docs for the syntax check'
-  task :validate_yard do
-    sh "bundle exec yard --fail-on-warning #{'--no-progress' if ENV['CI']}"
+  desc('Check `rbs` definition with `steep`, should be passed at least considering steep_expectations.yml')
+  task(:check_false_positive) do
+    sh('bundle exec steep check --severity-level=warning --with-expectations')
+  end
+
+  desc('Generate YARD docs for the syntax check')
+  task(:validate_yard) do
+    sh("bundle exec yard --fail-on-warning #{'--no-progress' if ENV['CI']}")
   end
 end
 
