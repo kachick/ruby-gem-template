@@ -3,7 +3,7 @@
 
 lib_name = 'my_new_library'
 
-require_relative './lib/my_new_library/version'
+require_relative('./lib/my_new_library/version')
 repository_url = "https://github.com/kachick/#{lib_name}"
 
 Gem::Specification.new do |gem|
@@ -37,7 +37,7 @@ Gem::Specification.new do |gem|
 
   unless might_be_parsing_by_tool_as_dependabot
     if files.grep(%r!\A(?:lib|sig)/!).size < 2
-      raise "obvious mistaken in packaging files, looks shortage: #{files.inspect}"
+      raise("obvious mistaken in packaging files, looks shortage: #{files.inspect}")
     end
   end
 

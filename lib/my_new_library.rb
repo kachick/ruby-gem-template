@@ -13,7 +13,7 @@ class MyNewLibrary
 
   FOOBAR = 42
 
-  attr_reader :milliseconds
+  attr_reader(:milliseconds)
 
   # @api private
   # @param [Integer] milliseconds
@@ -31,8 +31,8 @@ class MyNewLibrary
   end
 end
 
-require_relative 'my_new_library/version'
+require_relative('my_new_library/version')
 
 class MyNewLibrary
-  private_constant :FOOBAR
+  private_constant(:FOOBAR)
 end

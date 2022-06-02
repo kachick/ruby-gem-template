@@ -1,24 +1,24 @@
 # frozen_string_literal: true
 
-require 'bundler/gem_tasks'
+require('bundler/gem_tasks')
 
-require 'rake/testtask'
-require 'rspec/core/rake_task'
+require('rake/testtask')
+require('rspec/core/rake_task')
 
 begin
-  require 'rubocop/rake_task'
+  require('rubocop/rake_task')
 rescue LoadError
-  puts 'can not use rubocop in this environment'
+  puts('can not use rubocop in this environment')
 else
   RuboCop::RakeTask.new
 end
 
-task default: [:test_behaviors]
+task(default: [:test_behaviors])
 
-task test_behaviors: [:test, :spec]
+task(test_behaviors: [:test, :spec])
 
-desc 'Simulate CI results in local machine as possible'
-multitask simulate_ci: [:test_behaviors, :validate_signatures, :rubocop]
+desc('Simulate CI results in local machine as possible')
+multitask(simulate_ci: [:test_behaviors, :validate_signatures, :rubocop])
 
 Rake::TestTask.new(:test) do |tt|
   tt.pattern = 'test/**/test_*.rb'
@@ -29,8 +29,8 @@ RSpec::Core::RakeTask.new(:spec) do |rt|
   rt.ruby_opts = %w[-w]
 end
 
-desc 'Signature check, it means `rbs` and `YARD` syntax correctness'
-multitask validate_signatures: [:'signature:validate_yard', :'signature:validate_rbs']
+desc('Signature check, it means `rbs` and `YARD` syntax correctness')
+multitask(validate_signatures: [:'signature:validate_yard', :'signature:validate_rbs'])
 
 namespace(:signature) do
   desc('Validate `rbs` syntax, this should be passed')
@@ -54,25 +54,25 @@ namespace(:signature) do
   end
 end
 
-desc 'Generate YARD docs'
-task :yard do
-  sh 'bundle exec yard --fail-on-warning'
+desc('Generate YARD docs')
+task(:yard) do
+  sh('bundle exec yard --fail-on-warning')
 end
 
 FileList['benchmark/*.rb'].each do |path|
-  desc "Rough benchmark for #{File.basename(path)}"
-  task path do
-    ruby path
+  desc("Rough benchmark for #{File.basename(path)}")
+  task(path) do
+    ruby(path)
   end
 end
 
-desc 'Prevent miss packaging!'
-task :view_packaging_files do
-  sh 'rm -rf ./pkg'
-  sh 'rake build'
-  cd 'pkg' do
-    sh 'gem unpack *.gem'
-    sh 'tree -I *\.gem'
+desc('Prevent miss packaging!')
+task(:view_packaging_files) do
+  sh('rm -rf ./pkg')
+  sh('rake build')
+  cd('pkg') do
+    sh('gem unpack *.gem')
+    sh('tree -I *\.gem')
   end
-  sh 'rm -rf ./pkg'
+  sh('rm -rf ./pkg')
 end

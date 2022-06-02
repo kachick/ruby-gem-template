@@ -1,10 +1,10 @@
 # coding: utf-8
 # frozen_string_literal: true
 
-require_relative 'helper'
+require_relative('helper')
 
 class TestMyNewLibrary < Test::Unit::TestCase
-  include MyNewLibraryAssertions
+  include(MyNewLibraryAssertions)
 
   def setup
     nil
