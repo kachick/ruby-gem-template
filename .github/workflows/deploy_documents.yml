@@ -1,7 +1,7 @@
 name: Deploy documents
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
       - '.github/workflows/deploy_documents.yml'
       - 'lib/**'
@@ -14,8 +14,8 @@ jobs:
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          ruby-version: '3.1'
+          bundler-cache: true
       - name: git setting
         run: |
           git config --local user.email "kachick1@gmail.com"

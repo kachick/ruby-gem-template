@@ -1,24 +1,26 @@
-# https://docs.github.com/ja/actions/reference/workflow-syntax-for-github-actions
 name: Lint
 on:
   push:
     branches:
-      - main
+      - 'main'
     paths-ignore:
-      - 'docs/**'
-  pull_request: null # This enables to run on each PRs
+      - 'docs'
+  pull_request:
+    paths-ignore:
+      - 'docs'
 jobs:
   rubocop:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest]
-        ruby: [3.1]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ matrix.ruby }}
-        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - run: bundle exec rake rubocop
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+      - run: bundle exec rake rubocop
+
+  dprint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dprint/check@v2.0

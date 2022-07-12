@@ -22,6 +22,8 @@ group(:development) do
   gem('rubocop-performance', '~> 1.14.2', require: false)
   gem('rubocop-rubycw', '~> 0.1.6', require: false)
   gem('rubocop-thread_safety', '~> 0.4.4', require: false)
+
+  # Used for ruby code block. Markdown formatter is delegating to dprint.
   gem('rubocop-md', '~> 1.0.1', require: false)
 end
 
