@@ -10,7 +10,7 @@ on:
       - '.github/workflows/lint.yml'
       - '.github/workflows/deploy_documents.yml'
       - '.github/workflows/dependency-review.yml'
-      - '.github/workflows/auto-merge-dependabot-prs.yml'
+      - '.github/workflows/merge-bot-pr.yml'
   pull_request:
     paths-ignore:
       - '.vscode'
@@ -19,7 +19,7 @@ on:
       - '.github/workflows/lint.yml'
       - '.github/workflows/deploy_documents.yml'
       - '.github/workflows/dependency-review.yml'
-      - '.github/workflows/auto-merge-dependabot-prs.yml'
+      - '.github/workflows/merge-bot-pr.yml'
 
 jobs:
   rbs:
