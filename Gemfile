@@ -12,7 +12,7 @@ group(:development, :test) do
 end
 
 group(:development) do
-  gem('debug', '~> 1.6.3', require: false)
+  gem('debug', '~> 1.7.0', require: false)
   gem('rbs', '~> 2.8.1', require: false)
   gem('steep', '~> 1.3.0', require: false)
   gem('yard', '~> 0.9.28', require: false)
