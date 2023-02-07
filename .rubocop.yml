@@ -1,9 +1,7 @@
 require:
   - rubocop-rake
   - rubocop-performance
-  - rubocop-rubycw
   - rubocop-thread_safety
-  - rubocop-md
 
 AllCops:
   TargetRubyVersion: 3.0
@@ -912,16 +910,3 @@ Lint/ConstantResolution:
 
 Lint/EmptyInPattern:
   Enabled: true
-
-Rubycw/Rubycw:
-  Enabled: true
-  Include:
-    - '**/*.rb'
-    - 'Rakefile'
-    - 'Steepfile'
-    - 'bin/**/*'
-    - 'exe/**/*'
-
-Markdown:
-  WarnInvalid: true
-  Autodetect: true
