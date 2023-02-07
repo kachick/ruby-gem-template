@@ -21,3 +21,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: dprint/check@v2.2
+        with:
+          config-path: 'dprint-ci.json'
