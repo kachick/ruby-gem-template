@@ -6,8 +6,6 @@ The motivation is [written in Japanese](https://github.com/kachick/times_kachick
 
 ---
 
-<img src="./assets/ruby-lang/ruby.png" alt="logo" style="width:150px;"/>
-
 [![Build Status](https://github.com/kachick/my_new_library/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/kachick/my_new_library/actions/workflows/ci.yml?query=branch%3Amaster++)
 [![Gem Version](https://badge.fury.io/rb/my_new_library.svg)](https://badge.fury.io/rb/my_new_library)
 
