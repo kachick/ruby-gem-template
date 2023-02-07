@@ -6,15 +6,17 @@
 
 Welcome all of the contributions!
 
-## Development
+## Setup
 
-At first, you should install development dependencies
+Needs your ruby and [dprint](https://dprint.dev/) for development.\
+If you are using [Nix](https://nixos.org/) package manager, [the definition](default.nix) is included.
 
 ```console
 $ git clone git@github.com:kachick/my_new_library.git
 $ cd ./my_new_library
-$ ./bin/setup
-Dependencies are installed!
+$ nix-shell
+$ dprint --version
+$ bundle install || bundle update
 ```
 
 ## Feel the latest version with REPL
