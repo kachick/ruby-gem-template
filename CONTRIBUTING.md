@@ -26,7 +26,7 @@ $ ./bin/console
 Starting up IRB with loading with latest code
 ```
 
-## How to make ideal PRs (Not a mandatory rule, feel free to PR!)
+## Check list after changes
 
 If you try to add/change/fix features, please update and/or confirm core feature's tests are not broken.
 

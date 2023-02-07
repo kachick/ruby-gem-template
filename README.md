@@ -1,8 +1,6 @@
 # my_new_library
 
-Ruby library template for [@kachick](https://github.com/kachick), To make easy to create own gem that having prepared environment.
-
-The motivation is [written in Japanese](https://github.com/kachick/times_kachick/issues/75)
+Ruby library template for my own
 
 ---
 
