@@ -23,6 +23,7 @@ on:
 
 jobs:
   rbs:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -33,6 +34,7 @@ jobs:
       - run: bundle exec rake signature:validate_rbs
 
   yard:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
