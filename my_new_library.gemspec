@@ -3,7 +3,7 @@
 
 lib_name = 'my_new_library'
 
-require_relative('./lib/my_new_library/version')
+require_relative('lib/my_new_library/version')
 repository_url = "https://github.com/kachick/#{lib_name}"
 
 Gem::Specification.new do |gem|
