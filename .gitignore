@@ -24,5 +24,7 @@
 /vendor/
 
 *.lock
+!flake.lock
+.direnv
 
 .DS_Store
