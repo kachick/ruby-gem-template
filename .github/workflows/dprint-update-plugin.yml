@@ -4,7 +4,6 @@ on:
     branches: ['main']
     paths:
       - '.github/workflows/dprint-update-plugin.yml'
-      - 'dprint-ci.json'
   schedule:
     # Run at 17:00 UTC every Monday
     - cron: '0 17 * * 1'
@@ -26,10 +25,9 @@ jobs:
     timeout-minutes: 15
     steps:
       - id: update-dprint-plugins
-        uses: kachick/action-update-dprint-plugins@v1.0.0
+        uses: kachick/action-update-dprint-plugins@v1
         with:
           base-branch: 'main'
-          config-path: 'dprint-ci.json'
       # Enable `Allow auto-merge` in your repository settings if you need following steps
       - name: Merge sent PR
         # Merge if `dprint fmt` does not make any diff even after updating plugins
