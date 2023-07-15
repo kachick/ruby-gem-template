@@ -73,7 +73,7 @@ task(:view_packaging_files) do
 end
 
 task(:update) do
-  sh('dprint config update --config dprint-ci.json')
+  sh('dprint config update --yes')
 end
 
 desc 'Print dependencies'
@@ -85,6 +85,6 @@ end
 
 desc 'Tests except ruby'
 task :check_non_ruby do
-  sh('dprint check --config dprint-ci.json')
+  sh('dprint check')
   sh('nixpkgs-fmt --check ./*.nix')
 end
