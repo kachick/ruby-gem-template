@@ -28,6 +28,7 @@ jobs:
           dprint-version: '0.36.1'
 
   typos:
+    # THIS LINE SHOULD FAIL - depdendencies
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
