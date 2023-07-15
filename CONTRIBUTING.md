@@ -14,7 +14,7 @@ Author is using [Nix](https://nixos.org/), and put the [definition](flake.nix).
 ```console
 $ git clone git@github.com:kachick/my_new_library.git
 $ cd ./my_new_library
-$ nix-shell
+$ nix develop # Or `direnv allow`
 $ dprint --version
 $ bundle install || bundle update
 ```
