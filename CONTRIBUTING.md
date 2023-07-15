@@ -8,8 +8,8 @@ Welcome all of the contributions!
 
 ## Setup
 
-Needs your ruby and [dprint](https://dprint.dev/) for development.\
-If you are using [Nix](https://nixos.org/) package manager, [the definition](default.nix) is included.
+Needs your ruby, which is a supported version, and some external tools for development.\
+Author is using [Nix](https://nixos.org/), and put the [definition](flake.nix).
 
 ```console
 $ git clone git@github.com:kachick/my_new_library.git
@@ -21,7 +21,7 @@ $ bundle install || bundle update
 
 ## Dprint
 
-Use dprint as below
+Using [dprint](https://dprint.dev/) as below
 
 ```console
 $ dprint --config dprint-ci.json check
