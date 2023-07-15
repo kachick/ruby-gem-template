@@ -3,7 +3,7 @@
     "editorconfig.editorconfig",
     "dprint.dprint",
     "github.vscode-github-actions",
-    "streetsidesoftware.code-spell-checker",
+    "tekumara.typos-vscode",
     "rubocop.vscode-rubocop",
     "koichisasada.vscode-rdbg",
     "soutaro.steep-vscode",
