@@ -81,10 +81,12 @@ task :inspect_dependencies do
   sh('ruby --version')
   sh('dprint --version')
   sh('tree --version')
+  sh('typos --version')
 end
 
 desc 'Tests except ruby'
 task :check_non_ruby do
+  sh('typos . .github .vscode')
   sh('dprint check')
   sh('nixpkgs-fmt --check ./*.nix')
 end
