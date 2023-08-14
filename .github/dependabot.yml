@@ -22,7 +22,3 @@ updates:
       rubocop-dependencies:
         patterns:
           - '*rubocop*'
-      rbs-dependencies:
-        patterns:
-          - 'rbs*'
-          - '*steep*'

@@ -12,8 +12,6 @@ on:
       - '.github/workflows/deploy_documents.yml'
       - '.github/workflows/dependency-review.yml'
       - '.github/workflows/merge-bot-pr.yml'
-      - 'sig'
-      - 'Steepfile'
       - '.yardopts'
   pull_request:
     paths-ignore:
@@ -24,8 +22,6 @@ on:
       - '.github/workflows/deploy_documents.yml'
       - '.github/workflows/dependency-review.yml'
       - '.github/workflows/merge-bot-pr.yml'
-      - 'sig'
-      - 'Steepfile'
       - '.yardopts'
 
 jobs:
