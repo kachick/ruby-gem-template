@@ -5,9 +5,6 @@
     "github.vscode-github-actions",
     "tekumara.typos-vscode",
     "rubocop.vscode-rubocop",
-    "koichisasada.vscode-rdbg",
-    "soutaro.steep-vscode",
-    "soutaro.rbs-syntax",
     "jnoortheen.nix-ide"
   ]
 }
