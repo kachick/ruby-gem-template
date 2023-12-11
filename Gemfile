@@ -12,7 +12,7 @@ group(:development, :test) do
 end
 
 group(:development) do
-  gem('debug', '~> 1.8.0', require: false)
+  gem('debug', '~> 1.9.0', require: false)
   gem('yard', '~> 0.9.34', require: false)
   gem('benchmark-ips', '~> 2.12.0', require: false)
   gem('rubocop', '~> 1.58.0', require: false)
