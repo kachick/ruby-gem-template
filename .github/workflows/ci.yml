@@ -12,7 +12,6 @@ on:
       - '.github/workflows/deploy_documents.yml'
       - '.github/workflows/dependency-review.yml'
       - '.github/workflows/merge-bot-pr.yml'
-      - '.yardopts'
   pull_request:
     paths-ignore:
       - '.vscode'
@@ -22,7 +21,6 @@ on:
       - '.github/workflows/deploy_documents.yml'
       - '.github/workflows/dependency-review.yml'
       - '.github/workflows/merge-bot-pr.yml'
-      - '.yardopts'
 
 jobs:
   test:

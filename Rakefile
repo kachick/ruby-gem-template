@@ -18,7 +18,7 @@ task(default: [:test_behaviors])
 task(test_behaviors: [:test, :spec])
 
 desc('Simulate CI results in local machine as possible')
-multitask(simulate_ci: [:test_behaviors, :validate_signatures, :rubocop])
+multitask(simulate_ci: [:test_behaviors, :rubocop])
 
 Rake::TestTask.new(:test) do |tt|
   tt.pattern = 'test/**/test_*.rb'
@@ -27,16 +27,6 @@ end
 
 RSpec::Core::RakeTask.new(:spec) do |rt|
   rt.ruby_opts = %w[-w]
-end
-
-desc('Signature check')
-multitask(validate_signatures: [:'signature:validate_yard'])
-
-namespace(:signature) do
-  desc('Generate YARD docs for the syntax check')
-  task(:validate_yard) do
-    sh("bundle exec yard --fail-on-warning #{'--no-progress' if ENV['CI']}")
-  end
 end
 
 FileList['benchmark/*.rb'].each do |path|
