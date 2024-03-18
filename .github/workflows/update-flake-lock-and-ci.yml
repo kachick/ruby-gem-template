@@ -14,9 +14,9 @@ jobs:
     uses: kachick/selfup/.github/workflows/reusable-bump-flake-lock-and-selfup.yml@action-v1
     with:
       dry-run: ${{ github.event_name == 'pull_request' }}
+      pr-title: 'Bump flake.lock and related dependencies'
       optional-run: |
         nix develop --command ruby -e 'puts RUBY_VERSION' > .ruby-version
-        pr-title: 'Bump flake.lock and related dependencies'
         # https://stackoverflow.com/q/34807971
         git update-index -q --really-refresh
         git diff-index --quiet HEAD || git commit -m 'Update .ruby-version' .ruby-version
